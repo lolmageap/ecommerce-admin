@@ -23,15 +23,26 @@ repositories {
 }
 
 dependencies {
+
 	implementation("org.springframework.boot:spring-boot-starter-data-jpa")
 	implementation("org.springframework.boot:spring-boot-starter-thymeleaf")
-	implementation("nz.net.ultraq.thymeleaf:thymeleaf-layout-dialect:3.0.0")
+	implementation("nz.net.ultraq.thymeleaf:thymeleaf-layout-dialect:3.2.0")
 	implementation("org.springframework.boot:spring-boot-starter-web")
 	implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
 	implementation("org.jetbrains.kotlin:kotlin-reflect")
+	implementation("org.springframework.boot:spring-boot-starter-actuator")
+	implementation("org.springframework.boot:spring-boot-starter-security")
+	implementation("org.thymeleaf.extras:thymeleaf-extras-springsecurity5")
+	implementation("com.netflix.graphql.dgs:graphql-dgs-client:6.0.1")
+	implementation("io.github.microutils:kotlin-logging:1.12.5")
+
+
 	developmentOnly("org.springframework.boot:spring-boot-devtools")
+
 	runtimeOnly("com.mysql:mysql-connector-j")
+
 	annotationProcessor("org.springframework.boot:spring-boot-configuration-processor")
+
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
 }
 

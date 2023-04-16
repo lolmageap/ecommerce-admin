@@ -19,7 +19,21 @@ spring:
     use_sql_comments: true
   open-in-view: false
 
+  devtools:
+   livereload:
+    enabled: true
+  thymeleaf:
+   cache: false
+
+logging:
+ level:
+  root: info
+
 server:
  port: 9999
 
-
+#apis:
+# product-graphql-api:
+#  url: http://localhost:8083/graphql
+# order-api:
+#  url: http://localhost:9090/providers/order-api/v1/orders
