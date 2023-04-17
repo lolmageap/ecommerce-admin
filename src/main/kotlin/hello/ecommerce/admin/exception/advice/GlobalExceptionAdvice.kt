@@ -1,4 +1,4 @@
-package hello.ecommerce.admin.exception.controller
+package hello.ecommerce.admin.exception.advice
 
 import hello.ecommerce.admin.exception.ErrorResponse
 import hello.ecommerce.admin.exception.ServerException
@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.ExceptionHandler
 import org.springframework.web.bind.annotation.RestControllerAdvice
 
 @RestControllerAdvice
-class GlobalExceptionHandler {
+class GlobalExceptionAdvice {
 
     private val logger = KotlinLogging.logger {}
 

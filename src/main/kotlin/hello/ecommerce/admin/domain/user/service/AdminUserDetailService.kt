@@ -11,7 +11,6 @@ import org.springframework.security.core.userdetails.UserDetailsService
 import org.springframework.security.core.userdetails.UsernameNotFoundException
 import org.springframework.stereotype.Service
 import org.springframework.transaction.annotation.Transactional
-import java.util.*
 
 @Service
 @Transactional
@@ -19,7 +18,7 @@ class AdminUserDetailService(val adminUserRepository: AdminUserRepository) : Use
 
     private val logger = KotlinLogging.logger {}
 
-    fun save(adminUser: AdminUser): AdminUser? {
+    fun save(adminUser: AdminUser): AdminUser {
         val adminUser: AdminUser = adminUserRepository.findByEmailAndIsActivated(adminUser.email, true)
                 ?: return adminUserRepository.save(adminUser)
 

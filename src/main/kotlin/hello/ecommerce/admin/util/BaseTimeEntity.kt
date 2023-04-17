@@ -11,17 +11,18 @@ import javax.persistence.*
 open class BaseTimeEntity(
 
         @Id @Column(name = "id") @GeneratedValue(strategy = GenerationType.IDENTITY)
-        private var id: Long? = null,
+        var id: Long? = null,
 
         @CreatedDate @Column(updatable = false)
-        private var createdDate: LocalDateTime? = null,
+        var createdAt: LocalDateTime? = null,
 
         @LastModifiedDate
-        private val lastModifiedDate: LocalDateTime? = null,
+        val updatedAt: LocalDateTime? = null,
 
         @Column(name = "is_deleted")
-        private val isDeleted: Boolean = false,
+        val isDeleted: Boolean = false,
 
-        @Column(name = "is_activated") val isActivated: Boolean = true,
+        @Column(name = "is_activated")
+        val isActivated: Boolean = true,
 
         )

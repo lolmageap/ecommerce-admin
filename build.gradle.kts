@@ -33,7 +33,7 @@ dependencies {
 	implementation("org.springframework.boot:spring-boot-starter-actuator")
 	implementation("org.springframework.boot:spring-boot-starter-security")
 	implementation("org.thymeleaf.extras:thymeleaf-extras-springsecurity5")
-	implementation("com.netflix.graphql.dgs:graphql-dgs-client:6.0.1")
+//	implementation("com.netflix.graphql.dgs:graphql-dgs-client:6.0.1")
 	implementation("io.github.microutils:kotlin-logging:1.12.5")
 
 

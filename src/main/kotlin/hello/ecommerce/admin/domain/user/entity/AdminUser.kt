@@ -1,8 +1,10 @@
 package hello.ecommerce.admin.domain.user.entity
 
+import hello.ecommerce.admin.domain.user.dto.AdminUserFormDto
 import hello.ecommerce.admin.domain.user.enums.AdminUserPermission
 import hello.ecommerce.admin.domain.user.enums.AdminUserRole
 import hello.ecommerce.admin.util.BaseTimeEntity
+import org.springframework.security.crypto.password.PasswordEncoder
 import javax.persistence.*
 
 @Entity
@@ -18,8 +20,8 @@ class AdminUser (
     @Column(name = "password")
     val password: String,
 
-    @Column(name = "phone")
-    val phone: String,
+//    @Column(name = "phone")
+//    val phone: String,
 
     @Column(name = "role")
     @Enumerated(value = EnumType.STRING)
@@ -31,15 +33,17 @@ class AdminUser (
 
 ) : BaseTimeEntity() {
 
-//    fun createAdminUser(adminUserDTO: AdminUserFormDTO, passwordEncoder: PasswordEncoder): AdminUser? {
-//        AdminUser(
-//                username = ,
-//                password = ,
-//                email = ,
-//                role = AdminUserRole.USER,
-//                permission = AdminUserPermission.ALL,
-//                phone = ,
-//        )
-//    }
+    companion object{
+        fun createAdminUser(adminUserDTO: AdminUserFormDto, passwordEncoder: PasswordEncoder): AdminUser {
+            return AdminUser(
+                    username = adminUserDTO.username,
+                    password = passwordEncoder.encode(adminUserDTO.password1),
+                    email = adminUserDTO.email,
+                    role = AdminUserRole.USER,
+                    permission = AdminUserPermission.ALL,
+//                    phone = adminUserDTO.phone,
+            )
+        }
+    }
 
 }
