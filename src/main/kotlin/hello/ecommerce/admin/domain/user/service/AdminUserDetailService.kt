@@ -31,7 +31,7 @@ class AdminUserDetailService(val adminUserRepository: AdminUserRepository) : Use
         logger.info(">>> loadUserByUsername, {}", userEmail)
 
         val adminUser: AdminUser = adminUserRepository.findByEmailAndIsActivated(userEmail, true)
-                ?: throw NotFoundAdminUserException(message = "Not found admin user with $userEmail")
+                ?: throw NotFoundAdminUserException(message = "Not found admin user with ${userEmail}")
 
         return AdminUserDetail(
                 adminUser = adminUser,

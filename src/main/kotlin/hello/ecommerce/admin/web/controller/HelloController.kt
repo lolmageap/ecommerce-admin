@@ -8,13 +8,13 @@ import org.springframework.web.bind.annotation.PathVariable
 @Controller
 class HelloController {
 
-    @GetMapping
+    @GetMapping("/")
     fun index() : String = "/index"
 
-    @GetMapping("/delivery")
-    fun delivery() : String = "/products/products"
+    @GetMapping("/users/login")
+    fun delivery() : String = "/users/login"
 
-    @GetMapping("/products/product-detail/{id}")
-    fun productDetail(@PathVariable id : Long) : String = "/products/product-detail"
+//    @GetMapping("/products/product-detail/{id}")
+//    fun productDetail(@PathVariable id : Long) : String = "/products/product-detail"
 
 }

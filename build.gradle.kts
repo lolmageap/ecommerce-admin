@@ -30,12 +30,11 @@ dependencies {
 	implementation("org.springframework.boot:spring-boot-starter-web")
 	implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
 	implementation("org.jetbrains.kotlin:kotlin-reflect")
-	implementation("org.springframework.boot:spring-boot-starter-actuator")
+//	implementation("org.springframework.boot:spring-boot-starter-actuator")
 	implementation("org.springframework.boot:spring-boot-starter-security")
-	implementation("org.thymeleaf.extras:thymeleaf-extras-springsecurity5")
-	implementation("com.netflix.graphql.dgs:graphql-dgs-client:6.0.1")
-	implementation("io.github.microutils:kotlin-logging:1.12.5")
-
+//	implementation("org.thymeleaf.extras:thymeleaf-extras-springsecurity5")
+//	implementation("com.netflix.graphql.dgs:graphql-dgs-client:6.0.1")
+	implementation("io.github.microutils:kotlin-logging:3.0.5")
 
 	developmentOnly("org.springframework.boot:spring-boot-devtools")
 
